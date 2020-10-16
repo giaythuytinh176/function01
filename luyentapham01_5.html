@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<p id="outPuttoNum"></p>
+
+
+<script>
+
+    let arr = new Array("Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus");
+    let sec_arr = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+
+
+
+    function hamNhan(string) {
+        let count = 1;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] == string) {
+                return sec_arr[i];
+            }
+            if (count == (arr.length - 1) && !(arr == string)) {
+                return "Khong tim thay ten ngoi sao nay";
+            }
+            count++;
+        }
+    }
+
+    // function hamNhan(string){
+    //     let check = false;
+    //     for (let i = 0; i < arr.length; i++) {
+    //         if (arr[i] == string){
+    //             return sec_arr[i];
+    //         }else{
+    //             check = true;
+    //         }
+    //     }
+    //     if (check) {
+    //         return "Khong tim thay ten ngoi sao nay";
+    //     }
+    // }
+    document.getElementById("outPuttoNum").innerHTML = hamNhan(prompt("Nhap ten cua ngoi sao"));
+
+
+    // Bài 5: Tạo một mảng với bảy phần tử dạng chuỗi có giá trị là tên các ngôi sao sau:
+    // Polaris, Aldebaran, Deneb, Vega, Altair, Dubhe và Regulus.
+    // Tạo một mảng khác với bảy phần tử dạng chuỗi có giá trị là
+    //              tên các chòm sao tương ứng chứa các ngôi sao:
+    //              Ursa Minor, Tarurus, Cygnus, Lyra, Aquila, Ursa Major và Leo.
+    //              Tiếp theo, tạo một hàm nhận vào một tham số dạng chuỗi duy nhất.
+    //              Trong hàm này, duyệt qua mảng thứ nhất để tìm tên ngôi sao.
+    //              Nếu tìm thấy, trả lại giá trị tương ứng với chỉ số đó ở mảng thứ hai.
+    //              Nói cách khác, trả lại tên chòm sao của ngôi sao đó.
+    //              Trong phần <body> của trang web, dùng hộp thoại prompt để người dùng nhập vào tên của ngôi sao,
+    //                      sau đó gọi hàm với thông tin đầu vào.
+    //     Đừng quên xử lý trong trường hợp không tìm thấy ngôi sao nào.
+    //     Cho kết quả hiển thị trên màn hình.
+
+
+</script>
+
+</body>
+</html>
