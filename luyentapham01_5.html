@@ -20,17 +20,19 @@
     let sec_arr = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
 
 
-
     function hamNhan(string) {
         let count = 1;
+        let check = false;
         for (let i = 0; i < arr.length; i++) {
             if (arr[i] == string) {
                 return sec_arr[i];
-            }
-            if (count == (arr.length - 1) && !(arr == string)) {
-                return "Khong tim thay ten ngoi sao nay";
+            } else {
+                check = true;
             }
             count++;
+        }
+        if (check) {
+            return "Khong tim thay ten ngoi sao nay";
         }
     }
 
